@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100vh;
+            height: 100vh;
+            background-color: aquamarine;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-loader {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 2px solid;
+            position: relative;
+            animation-name: rotate;
+            animation-duration: .9s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            border-color: transparent red transparent;
+
+
+        }
+
+        .main-loader::before {
+            content: " ";
+            left: 15px;
+            top: 15px;
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 2px solid;
+            animation-name: rotatelate;
+            animation-duration: 3s;
+            border-color: orangered transparent green transparent;
+
+
+        }
+
+        @keyframes rotate {
+            from {
+                rotate: 0deg;
+            }
+
+            to {
+                rotate: 360deg;
+
+            }
+        }
+
+        @keyframes rotatelate {
+            from {
+                rotate: 90deg;
+            }
+
+            to {
+                rotate: 180deg;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-loader">
+
+    </div>
+
+</body>
+
+</html>
